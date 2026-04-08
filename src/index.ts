@@ -1,46 +1,53 @@
 import { Server } from "http";
 import app from "./app";
 import config from "./config";
-import mongoose from "mongoose";
-import 'dotenv/config';
+import connectDB from "./config/db";
+import Logger from "./utils/logger";
 
+let server: Server;
 
-
-//uncaught Exception handle
-process.on("uncaughtException", (error) => {
-  // console.log(error);
+// Uncaught exceptions
+process.on("uncaughtException", (err) => {
+  Logger.error("UNCAUGHT EXCEPTION! 💥 Shutting down...");
+  Logger.error(err.name, err.message);
   process.exit(1);
 });
-let server: Server;
+
 async function main() {
   try {
-    await mongoose.connect(config.database_url as string);
-    console.log(`Database is connected successfully`);
+    // Connect to database
+    await connectDB();
 
     server = app.listen(config.port, () => {
-      console.log(`Server is running on http://localhost:${config.port}`);
+      Logger.info(`Server is running on http://localhost:${config.port}`);
     });
-  } catch (error) {
-    console.log("Field to connect Database", error);
+  } catch (err) {
+    Logger.error(err);
+    process.exit(1);
   }
-
-  process.on("unhandledRejection", (error) => {
-    if (server) {
-      server.close(() => {
-        // console.log(error);
-        process.exit(1);
-      });
-    } else {
-      process.exit(1);
-    }
-  });
 }
 
 main();
 
-process.on("SIGTERM", () => {
-  // console.log("SIGTERM is received");
+// Unhandled rejections
+process.on("unhandledRejection", (err: any) => {
+  Logger.error("UNHANDLED REJECTION! 💥 Shutting down...");
+  Logger.error(err.name, err.message);
   if (server) {
-    server.close();
+    server.close(() => {
+      process.exit(1);
+    });
+  } else {
+    process.exit(1);
+  }
+});
+
+// SIGTERM handling
+process.on("SIGTERM", () => {
+  Logger.info("👋 SIGTERM RECEIVED. Shutting down gracefully");
+  if (server) {
+    server.close(() => {
+      Logger.info("💥 Process terminated!");
+    });
   }
 });

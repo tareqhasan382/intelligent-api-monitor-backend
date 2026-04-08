@@ -1,0 +1,19 @@
+2026-04-09 03:24:58:2458 [31merror[39m: [31mError connecting to MongoDB: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017[39m
+2026-04-09 03:27:00:270 [32minfo[39m: [32mMongoDB Connected: ac-r6f1vit-shard-00-00.xl4pwct.mongodb.net[39m
+2026-04-09 03:27:00:270 [32minfo[39m: [32m[39m
+[32m        ################################################[39m
+[32m        🛡️  Server listening on port: 5000 🛡️[39m
+[32m        ################################################[39m
+[32m      [39m
+2026-04-09 03:28:50:2850 [32minfo[39m: [32mMongoDB Connected: ac-r6f1vit-shard-00-00.xl4pwct.mongodb.net[39m
+2026-04-09 03:28:50:2850 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 03:29:19:2919 [35mhttp[39m: [35m[0mGET / [32m200[0m 4.867 ms - 99[0m[39m
+2026-04-09 03:29:19:2919 [31merror[39m: [31m[DEV ERROR] Can't find /favicon.ico on this server![39m
+2026-04-09 03:29:19:2919 [35mhttp[39m: [35m[0mGET /favicon.ico [33m404[0m 7.513 ms - 1418[0m[39m
+2026-04-09 03:31:40:3140 [31merror[39m: [31m[DEV ERROR] Can't find /adsdf on this server![39m
+2026-04-09 03:31:40:3140 [35mhttp[39m: [35m[0mGET /adsdf [33m404[0m 1.883 ms - 1406[0m[39m
+2026-04-09 03:32:18:3218 [35mhttp[39m: [35m[0mGET / [36m304[0m 0.633 ms - -[0m[39m
+2026-04-09 03:48:20:4820 [31merror[39m: [31mError connecting to MongoDB: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017[39m
+2026-04-09 03:49:50:4950 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 03:49:50:4950 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 03:50:01:501 [35mhttp[39m: [35m[0mGET / [36m304[0m 3.864 ms - -[0m[39m
