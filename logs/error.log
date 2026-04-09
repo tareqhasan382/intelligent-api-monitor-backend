@@ -2,3 +2,36 @@
 2026-04-09 03:29:19:2919 [31merror[39m: [31m[DEV ERROR] Can't find /favicon.ico on this server![39m
 2026-04-09 03:31:40:3140 [31merror[39m: [31m[DEV ERROR] Can't find /adsdf on this server![39m
 2026-04-09 03:48:20:4820 [31merror[39m: [31mError connecting to MongoDB: connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017[39m
+2026-04-09 13:39:45:3945 [31merror[39m: [31m[DEV ERROR] Can't find /favicon.ico on this server![39m
+2026-04-09 14:57:05:575 [31merror[39m: [31m[DEV ERROR] User already exists[39m
+2026-04-09 14:57:57:5757 [31merror[39m: [31m[DEV ERROR] [[39m
+[31m  {[39m
+[31m    "expected": "object",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "body"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected object, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2026-04-09 14:58:11:5811 [31merror[39m: [31m[DEV ERROR] [[39m
+[31m  {[39m
+[31m    "expected": "object",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "body"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected object, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2026-04-09 14:59:19:5919 [31merror[39m: [31m[DEV ERROR] [[39m
+[31m  {[39m
+[31m    "expected": "object",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "body"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected object, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2026-04-09 15:05:24:524 [31merror[39m: [31m[DEV ERROR] Unauthorized[39m

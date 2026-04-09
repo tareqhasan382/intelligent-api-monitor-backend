@@ -17,3 +17,70 @@
 2026-04-09 03:49:50:4950 [32minfo[39m: [32mMongoDB Connected: localhost[39m
 2026-04-09 03:49:50:4950 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
 2026-04-09 03:50:01:501 [35mhttp[39m: [35m[0mGET / [36m304[0m 3.864 ms - -[0m[39m
+2026-04-09 13:39:34:3934 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 13:39:34:3934 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 13:39:44:3944 [35mhttp[39m: [35m[0mGET / [36m304[0m 10.303 ms - -[0m[39m
+2026-04-09 13:39:45:3945 [31merror[39m: [31m[DEV ERROR] Can't find /favicon.ico on this server![39m
+2026-04-09 13:39:45:3945 [35mhttp[39m: [35m[0mGET /favicon.ico [33m404[0m 10.480 ms - 1418[0m[39m
+2026-04-09 14:44:22:4422 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 14:44:22:4422 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 14:47:22:4722 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 14:47:22:4722 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 14:48:15:4815 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 14:48:15:4815 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 14:49:16:4916 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 14:49:16:4916 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 14:49:31:4931 [35mhttp[39m: [35m[0mGET / [36m304[0m 8.334 ms - -[0m[39m
+2026-04-09 14:56:43:5643 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 14:56:43:5643 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 14:56:59:5659 [35mhttp[39m: [35m[0mPOST /api/v1/auth/register [32m201[0m 2728.898 ms - 256[0m[39m
+2026-04-09 14:57:05:575 [31merror[39m: [31m[DEV ERROR] User already exists[39m
+2026-04-09 14:57:05:575 [35mhttp[39m: [35m[0mPOST /api/v1/auth/register [33m409[0m 38.721 ms - 495[0m[39m
+2026-04-09 14:57:57:5757 [31merror[39m: [31m[DEV ERROR] [[39m
+[31m  {[39m
+[31m    "expected": "object",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "body"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected object, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2026-04-09 14:57:57:5757 [35mhttp[39m: [35m[0mPOST /api/v1/auth/login [31m500[0m 8.233 ms - 1493[0m[39m
+2026-04-09 14:58:11:5811 [31merror[39m: [31m[DEV ERROR] [[39m
+[31m  {[39m
+[31m    "expected": "object",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "body"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected object, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2026-04-09 14:58:11:5811 [35mhttp[39m: [35m[0mPOST /api/v1/auth/login [31m500[0m 5.718 ms - 1493[0m[39m
+2026-04-09 14:59:11:5911 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 14:59:11:5911 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 14:59:19:5919 [31merror[39m: [31m[DEV ERROR] [[39m
+[31m  {[39m
+[31m    "expected": "object",[39m
+[31m    "code": "invalid_type",[39m
+[31m    "path": [[39m
+[31m      "body"[39m
+[31m    ],[39m
+[31m    "message": "Invalid input: expected object, received undefined"[39m
+[31m  }[39m
+[31m][39m
+2026-04-09 14:59:19:5919 [35mhttp[39m: [35m[0mPOST /api/v1/auth/login [31m500[0m 31.613 ms - 1493[0m[39m
+2026-04-09 15:01:27:127 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 15:01:27:127 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 15:01:36:136 [35mhttp[39m: [35m[0mPOST /api/v1/auth/login [32m200[0m 1508.884 ms - 472[0m[39m
+2026-04-09 15:02:42:242 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 15:02:42:242 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 15:02:54:254 [35mhttp[39m: [35m[0mPOST /api/v1/auth/login [32m200[0m 1390.296 ms - 472[0m[39m
+2026-04-09 15:03:00:30 [35mhttp[39m: [35m[0mPOST /api/v1/auth/login [32m200[0m 1346.316 ms - 472[0m[39m
+2026-04-09 15:04:26:426 [35mhttp[39m: [35m[0mGET /api/v1/users/me [32m200[0m 21.561 ms - 261[0m[39m
+2026-04-09 15:05:24:524 [31merror[39m: [31m[DEV ERROR] Unauthorized[39m
+2026-04-09 15:05:24:524 [35mhttp[39m: [35m[0mGET /api/v1/users/69d769da3175990fa109ac81 [33m401[0m 15.883 ms - 930[0m[39m
+2026-04-09 15:05:38:538 [35mhttp[39m: [35m[0mGET /api/v1/users/69d769da3175990fa109ac81 [32m200[0m 11.151 ms - 253[0m[39m
+2026-04-09 15:05:50:550 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 15:05:50:550 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
