@@ -32,6 +32,9 @@ src/
  ├── utils/           # AI (Gemini), Email, Multer, and JWT Utilities
 ```
 
+## Diagram shows the full async flow
+![Async Flow](./diagram%20shows%20the%20full%20async%20flow.png)
+
 ## 🛠️ Setup Instructions
 
 ### Prerequisites
@@ -45,38 +48,30 @@ src/
 
 ### Installation
 
-1.  **Clone and Install:**
-    ```bash
+1. **Clone and Install:**
+  ```bash
     git clone <repository_url>
     cd Intelligent_API_Monitoring_System/backend
     npm install
-    ```
-2.  **Environment Variables:**
-    Create a `.env` file based on `.env.example`:
-    ```env
-    PORT=5000
-    DATABASE_URL=mongodb://localhost:27017/api_monitor
-    REDIS_HOST=127.0.0.1
-    REDIS_PORT=6379
-    REDIS_PASSWORD=  # Leave blank if your local Redis has no password
-    GEMINI_API_KEY=your_gemini_api_key
-    EMAIL_USER=your_email@gmail.com
-    EMAIL_PASS=your_app_password
-    ADMIN_EMAIL=admin@example.com
-    ```
+  ```
+2. **Environment Variables:**
+  Create a `.env` file based on `.env.example`:
 
 ## 📡 API Endpoints & Input Methods
 
 All API routes are prefixed with `/api/v1`.
 
 ### 1. Authentication
+
 - `POST /auth/register` - Create an account.
 - `POST /auth/login` - Authenticate and get tokens.
 
 ### 2. Monitoring (`POST /monitor`)
+
 You can provide input to the system using either of the following methods:
 
 #### Method A: Raw JSON Array (Direct Body)
+
 ```json
 [
   {
@@ -89,6 +84,7 @@ You can provide input to the system using either of the following methods:
 ```
 
 #### Method B: Object-Wrapped Array (Body)
+
 ```json
 {
   "apiResponses": [
@@ -104,9 +100,11 @@ You can provide input to the system using either of the following methods:
 ```
 
 #### Method C: Static JSON File Upload
+
 Upload a `.json` file containing any of the above formats using the field name `file` in a `multipart/form-data` request.
 
 ### 3. Alerts
+
 - `GET /alerts` - Fetch all detected anomalies for the user.
 - `PATCH /alerts/:id/resolve` - Mark an alert as resolved.
 
@@ -128,3 +126,4 @@ npm run dev
 npm run build
 npm start
 ```
+
