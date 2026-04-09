@@ -84,3 +84,284 @@
 2026-04-09 15:05:38:538 [35mhttp[39m: [35m[0mGET /api/v1/users/69d769da3175990fa109ac81 [32m200[0m 11.151 ms - 253[0m[39m
 2026-04-09 15:05:50:550 [32minfo[39m: [32mMongoDB Connected: localhost[39m
 2026-04-09 15:05:50:550 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 16:39:38:3938 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 16:39:38:3938 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:09:04:94 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:09:05:95 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:23:25:2325 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:23:25:2325 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:23:38:2338 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:23:38:2338 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:26:32:2632 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:26:32:2632 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:31:34:3134 [35mhttp[39m: [35m[0mGET /api/v1/users/69d769da3175990fa109ac81 [32m200[0m 804.020 ms - 253[0m[39m
+2026-04-09 17:31:40:3140 [35mhttp[39m: [35m[0mGET /api/v1/users/me [32m200[0m 7.230 ms - 261[0m[39m
+2026-04-09 17:34:27:3427 [31merror[39m: [31m[DEV ERROR] Can't find /api/v1/monitor on this server![39m
+2026-04-09 17:34:27:3427 [35mhttp[39m: [35m[0mGET /api/v1/monitor [33m404[0m 10.037 ms - 1345[0m[39m
+2026-04-09 17:35:37:3537 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:35:37:3537 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:36:08:368 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:36:08:368 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:36:43:3643 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:36:43:3643 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:36:53:3653 [31merror[39m: [31m[DEV ERROR] Can't find /api/v1/monitor on this server![39m
+2026-04-09 17:36:53:3653 [35mhttp[39m: [35m[0mGET /api/v1/monitor [33m404[0m 9.809 ms - 1345[0m[39m
+2026-04-09 17:37:14:3714 [31merror[39m: [31m[DEV ERROR] Invalid file type. Only JSON and CSV are allowed.[39m
+2026-04-09 17:37:14:3714 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [33m400[0m 13.608 ms - 1473[0m[39m
+2026-04-09 17:37:52:3752 [31merror[39m: [31m[DEV ERROR] API responses are required[39m
+2026-04-09 17:37:52:3752 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [33m400[0m 19.842 ms - 993[0m[39m
+2026-04-09 17:39:12:3912 [31merror[39m: [31m[DEV ERROR] Monitor validation failed: apiResponses.0.timestamp: Path `timestamp` is required., apiResponses.0.recordsReturned: Path `recordsReturned` is required., apiResponses.0.responseTime: Path `responseTime` is required., apiResponses.0.statusCode: Path `statusCode` is required., apiResponses.0.method: Path `method` is required., apiResponses.0.endpoint: Path `endpoint` is required., apiResponses.1.timestamp: Path `timestamp` is required., apiResponses.1.recordsReturned: Path `recordsReturned` is required., apiResponses.1.responseTime: Path `responseTime` is required., apiResponses.1.statusCode: Path `statusCode` is required., apiResponses.1.method: Path `method` is required., apiResponses.1.endpoint: Path `endpoint` is required.[39m
+2026-04-09 17:39:12:3912 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [31m500[0m 30.912 ms - 6315[0m[39m
+2026-04-09 17:40:22:4022 [31merror[39m: [31m[DEV ERROR] Monitor validation failed: apiResponses.0.recordsReturned: Path `recordsReturned` is required., apiResponses.0.responseTime: Path `responseTime` is required., apiResponses.0.statusCode: Path `statusCode` is required., apiResponses.0.method: Path `method` is required., apiResponses.0.endpoint: Path `endpoint` is required., apiResponses.1.recordsReturned: Path `recordsReturned` is required., apiResponses.1.responseTime: Path `responseTime` is required., apiResponses.1.statusCode: Path `statusCode` is required., apiResponses.1.method: Path `method` is required., apiResponses.1.endpoint: Path `endpoint` is required.[39m
+2026-04-09 17:40:22:4022 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [31m500[0m 9.593 ms - 5521[0m[39m
+2026-04-09 17:41:13:4113 [31merror[39m: [31m[DEV ERROR] API responses are required[39m
+2026-04-09 17:41:13:4113 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [33m400[0m 3.973 ms - 993[0m[39m
+2026-04-09 17:44:36:4436 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:44:36:4436 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:46:54:4654 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:46:54:4654 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:47:04:474 [35mhttp[39m: [35m[0mGET /api/v1/users/me [32m200[0m 23.108 ms - 261[0m[39m
+2026-04-09 17:47:11:4711 [35mhttp[39m: [35m[0mGET /api/v1/users/69d769da3175990fa109ac81 [32m200[0m 103.696 ms - 253[0m[39m
+2026-04-09 17:47:23:4723 [31merror[39m: [31mGemini AI Alert Generation Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.[39m
+2026-04-09 17:47:23:4723 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 17:47:23:4723 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 783.374 ms - 626[0m[39m
+2026-04-09 17:48:52:4852 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 71.970 ms - 504[0m[39m
+2026-04-09 17:54:46:5446 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:54:46:5446 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:55:50:5550 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:55:50:5550 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:56:04:564 [31merror[39m: [31mGemini AI Alert Generation Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.[39m
+2026-04-09 17:56:04:564 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 17:56:04:564 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 503.640 ms - 626[0m[39m
+2026-04-09 17:56:59:5659 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:56:59:5659 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:57:04:574 [31merror[39m: [31mGemini AI Alert Generation Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.[39m
+2026-04-09 17:57:04:574 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 17:57:04:574 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 398.126 ms - 626[0m[39m
+2026-04-09 17:58:53:5853 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 17:58:53:5853 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 17:59:31:5931 [31merror[39m: [31mGemini AI Alert Generation Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent: [404 Not Found] models/gemini-pro is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.[39m
+2026-04-09 17:59:31:5931 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 17:59:31:5931 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 399.209 ms - 626[0m[39m
+2026-04-09 18:02:04:24 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:02:04:24 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:02:30:230 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:02:30:230 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:02:37:237 [31merror[39m: [31mGemini AI Alert Generation Error: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.[39m
+2026-04-09 18:02:37:237 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:02:37:237 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 436.972 ms - 626[0m[39m
+2026-04-09 18:04:23:423 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:04:23:423 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:04:33:433 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:04:33:433 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:04:44:444 [31merror[39m: [31mGemini AI Alert Generation Error:[39m
+2026-04-09 18:04:44:444 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:04:45:445 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 438.292 ms - 626[0m[39m
+2026-04-09 18:08:08:88 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:08:08:88 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:08:52:852 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:08:52:852 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:08:57:857 [32minfo[39m: [32mFalling back to gemini-pro due to 404 error.[39m
+2026-04-09 18:08:58:858 [31merror[39m: [31mAll Gemini models failed.[39m
+2026-04-09 18:08:58:858 [31merror[39m: [31mGemini AI Alert Generation Error:[39m
+2026-04-09 18:08:58:858 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:08:58:858 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 593.712 ms - 626[0m[39m
+2026-04-09 18:10:16:1016 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:10:16:1016 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:10:45:1045 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:10:45:1045 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:10:50:1050 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:10:50:1050 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:11:03:113 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:11:03:113 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:11:08:118 [31merror[39m: [31mAI Service Unavailable: [GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent: [404 Not Found] models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.[39m
+2026-04-09 18:11:08:118 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:11:08:118 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 603.099 ms - 626[0m[39m
+2026-04-09 18:13:14:1314 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:13:14:1314 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:13:39:1339 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:13:39:1339 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:15:24:1524 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:15:24:1524 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 915.299 ms - 626[0m[39m
+2026-04-09 18:16:02:162 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:16:02:162 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:16:27:1627 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:16:27:1627 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:16:34:1634 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:16:34:1634 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 495.369 ms - 626[0m[39m
+2026-04-09 18:18:13:1813 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:18:13:1813 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:18:25:1825 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:18:25:1825 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 776.440 ms - 626[0m[39m
+2026-04-09 18:19:27:1927 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:19:27:1927 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:19:34:1934 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:19:34:1934 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 963.696 ms - 626[0m[39m
+2026-04-09 18:20:07:207 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:20:07:207 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:20:53:2053 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:20:53:2053 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 13943.423 ms - 626[0m[39m
+2026-04-09 18:21:39:2139 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:21:40:2140 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:22:42:2242 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:22:42:2242 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:23:29:2329 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:23:29:2329 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:24:04:244 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:24:04:244 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 27864.433 ms - 626[0m[39m
+2026-04-09 18:24:40:2440 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:24:40:2440 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:25:01:251 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:25:01:251 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:25:10:2510 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 55.609 ms - 6096[0m[39m
+2026-04-09 18:26:12:2612 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:26:12:2612 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 27121.556 ms - 626[0m[39m
+2026-04-09 18:38:03:383 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:38:03:383 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:38:49:3849 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:38:49:3849 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:39:15:3915 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:39:15:3915 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:40:02:402 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:40:02:402 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:41:04:414 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:41:04:414 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:46:54:4654 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:46:54:4654 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 18:46:54:4654 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:47:42:4742 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 470.946 ms - 626[0m[39m
+2026-04-09 18:47:42:4742 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d79fee66fff394ac545d77[39m
+2026-04-09 18:47:42:4742 [32minfo[39m: [32mProcessing job 1 for alert 69d79fee66fff394ac545d77[39m
+2026-04-09 18:47:42:4742 [32minfo[39m: [32mCache MISS: ai_cache:AppointmentAPI:500:Error Status Code[39m
+2026-04-09 18:47:43:4743 [31merror[39m: [31mGemini AI Alert Generation Error: Request failed with status code 429[39m
+2026-04-09 18:47:43:4743 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:47:43:4743 [32minfo[39m: [32mSuccessfully processed alert 69d79fee66fff394ac545d77[39m
+2026-04-09 18:47:44:4744 [32minfo[39m: [32mJob 1 completed successfully[39m
+2026-04-09 18:49:11:4911 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:49:11:4911 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 18:49:11:4911 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:49:38:4938 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 47.646 ms - 626[0m[39m
+2026-04-09 18:49:38:4938 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d7a062c3df01a61fb7e604[39m
+2026-04-09 18:49:38:4938 [32minfo[39m: [32mProcessing job 2 for alert 69d7a062c3df01a61fb7e604[39m
+2026-04-09 18:49:38:4938 [32minfo[39m: [32mCache HIT: ai_cache:AppointmentAPI:500:Error Status Code[39m
+2026-04-09 18:49:38:4938 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:49:38:4938 [32minfo[39m: [32mSuccessfully processed alert 69d7a062c3df01a61fb7e604[39m
+2026-04-09 18:49:38:4938 [32minfo[39m: [32mJob 2 completed successfully[39m
+2026-04-09 18:52:32:5232 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:52:32:5232 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 18:52:32:5232 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:53:03:533 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 18:53:03:533 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 18:53:03:533 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 18:53:11:5311 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 47.983 ms - 626[0m[39m
+2026-04-09 18:53:11:5311 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d7a137e01082357e7fe39b[39m
+2026-04-09 18:53:11:5311 [32minfo[39m: [32mProcessing job 3 for alert 69d7a137e01082357e7fe39b[39m
+2026-04-09 18:53:11:5311 [32minfo[39m: [32mCache HIT: ai_cache:AppointmentAPI:500:Error Status Code[39m
+2026-04-09 18:53:11:5311 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 18:53:11:5311 [32minfo[39m: [32mSuccessfully processed alert 69d7a137e01082357e7fe39b[39m
+2026-04-09 18:53:11:5311 [32minfo[39m: [32mJob 3 completed successfully[39m
+2026-04-09 18:54:44:5444 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 52.292 ms - 8984[0m[39m
+2026-04-09 19:04:24:424 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 12.795 ms - 8984[0m[39m
+2026-04-09 19:04:56:456 [35mhttp[39m: [35m[0mGET /api/v1/alerts/69d7a137e01082357e7fe398 [32m200[0m 16.821 ms - 92[0m[39m
+2026-04-09 19:05:18:518 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 13.987 ms - 8984[0m[39m
+2026-04-09 19:05:28:528 [35mhttp[39m: [35m[0mGET /api/v1/alerts/69d769da3175990fa109ac81 [32m200[0m 4.172 ms - 92[0m[39m
+2026-04-09 19:05:43:543 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 14.557 ms - 8984[0m[39m
+2026-04-09 19:05:56:556 [35mhttp[39m: [35m[0mGET /api/v1/alerts/69d7a137e01082357e7fe39b [32m200[0m 7.888 ms - 750[0m[39m
+2026-04-09 19:07:30:730 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 23.030 ms - 464[0m[39m
+2026-04-09 19:07:30:730 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d7a492e01082357e7fe39e[39m
+2026-04-09 19:07:30:730 [32minfo[39m: [32mProcessing job 4 for alert 69d7a492e01082357e7fe39e[39m
+2026-04-09 19:07:30:730 [32minfo[39m: [32mCache MISS: ai_cache:InventoryService:200:High Response Time[39m
+2026-04-09 19:07:31:731 [31merror[39m: [31mGemini AI Alert Generation Error: Request failed with status code 429[39m
+2026-04-09 19:07:31:731 [32minfo[39m: [32mSuccessfully processed alert 69d7a492e01082357e7fe39e[39m
+2026-04-09 19:07:31:731 [32minfo[39m: [32mJob 4 completed successfully[39m
+2026-04-09 19:12:37:1237 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:12:37:1237 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:12:37:1237 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:13:01:131 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 164.924 ms - 622[0m[39m
+2026-04-09 19:13:01:131 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d7a5dd95c24c722be9c531[39m
+2026-04-09 19:13:01:131 [32minfo[39m: [32mProcessing job 5 for alert 69d7a5dd95c24c722be9c531[39m
+2026-04-09 19:13:01:131 [32minfo[39m: [32mCache MISS: ai_cache:AuthService:401:Error Status Code[39m
+2026-04-09 19:13:01:131 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d7a5dd95c24c722be9c532[39m
+2026-04-09 19:13:01:131 [32minfo[39m: [32mProcessing job 6 for alert 69d7a5dd95c24c722be9c532[39m
+2026-04-09 19:13:01:131 [32minfo[39m: [32mCache MISS: ai_cache:PatientRecordAPI:503:Error Status Code[39m
+2026-04-09 19:13:01:131 [31merror[39m: [31mGemini AI Alert Generation Error: Request failed with status code 429[39m
+2026-04-09 19:13:01:131 [31merror[39m: [31mGemini AI Alert Generation Error: Request failed with status code 429[39m
+2026-04-09 19:13:01:131 [32minfo[39m: [32mSuccessfully processed alert 69d7a5dd95c24c722be9c531[39m
+2026-04-09 19:13:01:131 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 19:13:01:131 [32minfo[39m: [32mSuccessfully processed alert 69d7a5dd95c24c722be9c532[39m
+2026-04-09 19:13:01:131 [32minfo[39m: [32mJob 5 completed successfully[39m
+2026-04-09 19:13:01:131 [32minfo[39m: [32mJob 6 completed successfully[39m
+2026-04-09 19:14:05:145 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:14:05:145 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:14:05:145 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:14:14:1414 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 55.581 ms - 622[0m[39m
+2026-04-09 19:14:14:1414 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d7a6262f2350a7dd4db070[39m
+2026-04-09 19:14:14:1414 [32minfo[39m: [32mProcessing job 7 for alert 69d7a6262f2350a7dd4db070[39m
+2026-04-09 19:14:14:1414 [32minfo[39m: [32mCache HIT: ai_cache:AuthService:401:Error Status Code[39m
+2026-04-09 19:14:14:1414 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d7a6262f2350a7dd4db071[39m
+2026-04-09 19:14:14:1414 [32minfo[39m: [32mProcessing job 8 for alert 69d7a6262f2350a7dd4db071[39m
+2026-04-09 19:14:14:1414 [32minfo[39m: [32mSuccessfully processed alert 69d7a6262f2350a7dd4db070[39m
+2026-04-09 19:14:14:1414 [32minfo[39m: [32mCache HIT: ai_cache:PatientRecordAPI:503:Error Status Code[39m
+2026-04-09 19:14:15:1415 [32minfo[39m: [32mJob 7 completed successfully[39m
+2026-04-09 19:14:15:1415 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 19:14:15:1415 [32minfo[39m: [32mSuccessfully processed alert 69d7a6262f2350a7dd4db071[39m
+2026-04-09 19:14:15:1415 [32minfo[39m: [32mJob 8 completed successfully[39m
+2026-04-09 19:14:34:1434 [35mhttp[39m: [35m[0mGET /api/v1/alerts/ [32m200[0m 18.004 ms - 12309[0m[39m
+2026-04-09 19:17:47:1747 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:17:47:1747 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:17:47:1747 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:18:21:1821 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 443.943 ms - 459[0m[39m
+2026-04-09 19:18:21:1821 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d7a71dc241dffeec600dad[39m
+2026-04-09 19:18:21:1821 [32minfo[39m: [32mProcessing job 9 for alert 69d7a71dc241dffeec600dad[39m
+2026-04-09 19:18:21:1821 [32minfo[39m: [32mCache MISS: ai_cache:BillingGateway:200:Zero Records Returned[39m
+2026-04-09 19:18:40:1840 [35mhttp[39m: [35m[0mGET /api/v1/alerts/ [32m200[0m 35.537 ms - 12790[0m[39m
+2026-04-09 19:19:08:198 [35mhttp[39m: [35m[0mGET /api/v1/alerts/69d7a71dc241dffeec600dad [32m200[0m 12.157 ms - 568[0m[39m
+2026-04-09 19:19:17:1917 [35mhttp[39m: [35m[0mGET /api/v1/alerts/69d7a71dc241dffeec600dad [32m200[0m 5.422 ms - 568[0m[39m
+2026-04-09 19:19:26:1926 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 19:19:26:1926 [32minfo[39m: [32mSuccessfully processed alert 69d7a71dc241dffeec600dad[39m
+2026-04-09 19:19:26:1926 [32minfo[39m: [32mJob 9 completed successfully[39m
+2026-04-09 19:19:34:1934 [35mhttp[39m: [35m[0mGET /api/v1/alerts/69d7a71dc241dffeec600dad [32m200[0m 5.329 ms - 930[0m[39m
+2026-04-09 19:20:14:2014 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:20:14:2014 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:20:14:2014 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:25:48:2548 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:25:48:2548 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:25:48:2548 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:27:48:2748 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:27:48:2748 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:27:48:2748 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:28:36:2836 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:28:36:2836 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:28:36:2836 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:31:52:3152 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:31:52:3152 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:31:52:3152 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:36:12:3612 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:36:12:3612 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:36:12:3612 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:36:31:3631 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 494.007 ms - 459[0m[39m
+2026-04-09 19:36:31:3631 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d7ab5fea5f0d806a1fe053[39m
+2026-04-09 19:36:31:3631 [32minfo[39m: [32mProcessing job 10 for alert 69d7ab5fea5f0d806a1fe053[39m
+2026-04-09 19:36:31:3631 [32minfo[39m: [32mCache HIT: ai_cache:BillingGateway:200:Zero Records Returned[39m
+2026-04-09 19:36:31:3631 [33mwarn[39m: [33mEmail configuration missing. Skipping email notification.[39m
+2026-04-09 19:36:31:3631 [32minfo[39m: [32mSuccessfully processed alert 69d7ab5fea5f0d806a1fe053[39m
+2026-04-09 19:36:31:3631 [32minfo[39m: [32mJob 10 completed successfully[39m
+2026-04-09 19:36:44:3644 [35mhttp[39m: [35m[0mGET /api/v1/alerts/69d7a71dc241dffeec600dad [32m200[0m 52.562 ms - 930[0m[39m
+2026-04-09 19:38:13:3813 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:38:13:3813 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:38:13:3813 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:38:23:3823 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:38:23:3823 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:38:23:3823 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:38:30:3830 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:38:30:3830 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:38:30:3830 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:38:47:3847 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:38:47:3847 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:38:47:3847 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:40:01:401 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:40:01:401 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:40:01:401 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 19:40:55:4055 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 19:40:55:4055 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 19:40:55:4055 [32minfo[39m: [32mServer is running on http://localhost:5000[39m

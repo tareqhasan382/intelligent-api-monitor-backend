@@ -3,6 +3,7 @@ import app from "./app";
 import config from "./config";
 import connectDB from "./config/db";
 import Logger from "./utils/logger";
+import { initAlertWorker } from "./workers/alertWorker";
 
 let server: Server;
 
@@ -17,6 +18,9 @@ async function main() {
   try {
     // Connect to database
     await connectDB();
+
+    // Initialize BullMQ Worker
+    initAlertWorker();
 
     server = app.listen(config.port, () => {
       Logger.info(`Server is running on http://localhost:${config.port}`);

@@ -1,218 +1,130 @@
-# Intelligent API Monitoring System - Backend
+# Intelligent API Monitoring & Alert System - Backend
 
-This is the backend for the Intelligent API Monitoring System, built with Node.js, Express, and MongoDB, following a modular architecture.
+This is the backend for the Intelligent API Monitoring System, built with Node.js, Express, and MongoDB, following a modular architecture and enhanced with Gemini AI for intelligent alert analysis.
 
-## Modular Pattern Overview
+## 🚀 Key Features
 
-The project is structured around a modular pattern to ensure maintainability, scalability, and clear separation of concerns. Each core feature (e.g., `user`, `auth`) resides in its own module, containing related components like controllers, services, models, routes, interfaces, and validation schemas.
+- **Modular Pattern**: Clean separation of concerns (Controllers, Services, Models, Routes).
+- **Asynchronous Task Processing**: Utilizes **BullMQ** and **Redis** for non-blocking AI analysis, ensuring sub-200ms TTFB.
+- **Intelligent Alerts**: Integration with **Google Gemini 2.0 Flash** to generate human-readable alert summaries.
+- **Distributed Caching**: **Redis** caching (with in-memory fallback) for repetitive AI analysis to reduce latency and cost.
+- **Anomaly Detection**: 
+  - Status Code Errors (4xx, 5xx).
+  - High Latency (Response Time > 2000ms).
+  - Zero Records Returned (even on 200 OK status).
+- **Email Notifications**: Automated HTML email alerts for **High** and **CRITICAL** severity anomalies using Nodemailer.
+- **Flexible Data Input**: Support for both raw JSON payloads and file uploads.
+
+## 🏗️ Architecture Overview
+
+The system follows a modular backend design with a distributed task-based architecture.
 
 ```
 src/
  ├── modules/
- │    ├── user/
- │    │    ├── user.controller.ts
- │    │    ├── user.service.ts
- │    │    ├── user.model.ts
- │    │    ├── user.route.ts
- │    │    ├── user.interface.ts
- │    │    ├── user.validation.ts
- │    ├── auth/
- │    │    ├── auth.controller.ts
- │    │    ├── auth.service.ts
- │    │    ├── auth.route.ts
- │    │    ├── auth.validation.ts
- │    ├── monitor/
- │    │    ├── monitor.controller.ts
- │    │    ├── monitor.service.ts
- │    │    ├── monitor.route.ts
- │    │
- │    ├── alert/
- │    │    ├── alert.controller.ts
- │    │    ├── alert.service.ts
- │    │    ├── alert.route.ts
- │    │
- ├── middleware/
- │    ├── auth.middleware.ts
- │    ├── validateRequest.ts
- ├── shared/
- │    ├── catchAsync.ts
- │    ├── sendResponse.ts
- ├── utils/
- │    ├── AppError.ts
- │    ├── authUtils.ts
- │    ├── logger.ts
- │
- ├── app.ts
- ├── index.ts
+ │    ├── user/       # User Profile & Management
+ │    ├── auth/       # Authentication (Login/Register)
+ │    ├── monitor/    # API Log Processing
+ │    ├── alert/      # Alert Storage & Retrieval
+ ├── queues/          # BullMQ Queue Definitions (Producer)
+ ├── workers/         # BullMQ Workers (Consumer)
+ ├── cache/           # Redis/In-memory Caching Layer
+ ├── utils/           # AI (Gemini), Email, Multer, and JWT Utilities
 ```
 
-## Dependencies
-
-The project utilizes the following key dependencies:
-
-*   `express`: Fast, unopinionated, minimalist web framework for Node.js.
-*   `mongoose`: MongoDB object modeling tool.
-*   `zod`: TypeScript-first schema declaration and validation library.
-*   `jsonwebtoken`: JSON Web Token implementation for Node.js.
-*   `bcryptjs`: Library for hashing passwords.
-*   `dotenv`: Loads environment variables from a `.env` file.
-*   `helmet`: Helps secure Express apps by setting various HTTP headers.
-*   `morgan`: HTTP request logger middleware for Node.js.
-*   `http-status-codes`: Utility to work with HTTP status codes.
-*   `ts-node-dev`: Restarts node on file changes for development.
-*   `typescript`: JavaScript with syntax for types.
-
-## Module Details
-
-### Auth Module
-
-Handles user authentication, including registration and login, and manages access and refresh tokens.
-
-*   **Controllers**: [auth.controller.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/modules/auth/auth.controller.ts) - Manages HTTP requests for user registration and login. It uses `catchAsync` for error handling and `sendResponse` for consistent API responses.
-*   **Services**: [auth.service.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/modules/auth/auth.service.ts) - Contains the business logic for user authentication, including creating new users, validating credentials, and generating JWT tokens.
-*   **Routes**: [auth.route.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/modules/auth/auth.route.ts) - Defines the API endpoints for authentication (`/register`, `/login`) and integrates `validateRequest` middleware for input validation.
-*   **Validation**: [auth.validation.ts](file:///d:/Care%HGuide/Intelligent_API_Monitoring_System/backend/src/modules/auth/auth.validation.ts) - Zod schemas for validating registration and login request bodies.
-
-### User Module
-
-Manages user-related operations, such as fetching user profiles and individual user details.
-
-*   **Controllers**: [user.controller.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/modules/user/user.controller.ts) - Handles HTTP requests for fetching user data (`/me`, `/:id`).
-*   **Services**: [user.service.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/modules/user/user.service.ts) - Provides methods for retrieving user information from the database.
-*   **Model**: [user.model.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/modules/user/user.model.ts) - Mongoose schema and model definition for the `User` entity, including password hashing before saving.
-*   **Routes**: [user.route.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/modules/user/user.route.ts) - Defines API endpoints for user-related actions, protected by the `auth` middleware.
-*   **Interface**: [user.interface.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/modules/user/user.interface.ts) - TypeScript interfaces for `IUser`, `IUserSafe`, `IUserCreateInput`, `IUserLoginInput`, and `IUserModel`.
-*   **Validation**: [user.validation.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/modules/user/user.validation.ts) - Zod schema for validating user ID parameters.
-
-## Middleware & Utilities
-
-### Middleware
-
-*   **`auth.middleware.ts`**: [auth.middleware.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/middleware/auth.middleware.ts) - Express middleware for authenticating requests using JWT tokens. It verifies the token and attaches user information to the request object.
-*   **`validateRequest.ts`**: [validateRequest.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/middleware/validateRequest.ts) - Generic middleware for validating incoming request data (body, query, params, cookies) against Zod schemas.
-
-### Utilities
-
-*   **`authUtils.ts`**: [authUtils.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/utils/authUtils.ts) - Centralized utility functions for JWT token creation and verification, and password hashing and comparison using `bcryptjs`.
-*   **`catchAsync.ts`**: [catchAsync.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/shared/catchAsync.ts) - A higher-order function to wrap asynchronous Express route handlers, catching any errors and passing them to the global error handler.
-*   **`sendResponse.ts`**: [sendResponse.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/shared/sendResponse.ts) - A utility function for sending consistent API responses with status codes, success flags, messages, and data.
-*   **`AppError.ts`**: [AppError.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/utils/AppError.ts) - Custom error class for handling operational errors in the application.
-*   **`logger.ts`**: [logger.ts](file:///d:/Care%20Guide/Intelligent_API_Monitoring_System/backend/src/utils/logger.ts) - Configures Winston for application logging, with different transports for console and file output.
-
-## API Routes
-
-All API routes are prefixed with `/api/v1`.
-
-### Auth Routes
-
-*   `POST /api/v1/auth/register`: Register a new user.
-*   `POST /api/v1/auth/login`: Log in a user and receive access/refresh tokens.
-
-### User Routes
-
-*   `GET /api/v1/users/me`: Get the profile of the authenticated user. (Requires authentication)
-*   `GET /api/v1/users/:id`: Get details of a specific user by ID. (Requires authentication)
-
-## Project Setup
+## 🛠️ Setup Instructions
 
 ### Prerequisites
 
-*   Node.js (v18 or higher recommended)
-*   npm (or yarn)
-*   MongoDB instance (local or cloud-hosted)
+- Node.js (v18+)
+- MongoDB (Local or Atlas)
+- **Redis Server**: 
+  - Recommended: **v6.2.0 or higher** (Required for optimal BullMQ performance).
+  - Minimum: v5.0.0 (May show version warnings in logs).
+- Google Gemini API Key
 
 ### Installation
 
-1.  **Clone the repository:**
+1.  **Clone and Install:**
     ```bash
     git clone <repository_url>
     cd Intelligent_API_Monitoring_System/backend
-    ```
-2.  **Install dependencies:**
-    ```bash
     npm install
     ```
+2.  **Environment Variables:**
+    Create a `.env` file based on `.env.example`:
+    ```env
+    PORT=5000
+    DATABASE_URL=mongodb://localhost:27017/api_monitor
+    REDIS_HOST=127.0.0.1
+    REDIS_PORT=6379
+    REDIS_PASSWORD=  # Leave blank if your local Redis has no password
+    GEMINI_API_KEY=your_gemini_api_key
+    EMAIL_USER=your_email@gmail.com
+    EMAIL_PASS=your_app_password
+    ADMIN_EMAIL=admin@example.com
+    ```
 
-### Environment Variables
+## 📡 API Endpoints & Input Methods
 
-Create a `.env` file in the `backend` directory based on `.env.example`:
+All API routes are prefixed with `/api/v1`.
 
+### 1. Authentication
+- `POST /auth/register` - Create an account.
+- `POST /auth/login` - Authenticate and get tokens.
+
+### 2. Monitoring (`POST /monitor`)
+You can provide input to the system using either of the following methods:
+
+#### Method A: Raw JSON Array (Direct Body)
+```json
+[
+  {
+    "api_name": "PatientDataAPI",
+    "response_time_ms": 1200,
+    "status_code": 200,
+    "records_returned": 50
+  }
+]
 ```
-NODE_ENV=development
-PORT=5000
-DATABASE_URL=mongodb://localhost:27017/intelligent-api-monitoring
-JWT_SECRET=your_jwt_secret_key
-JWT_REFRESH_SECRET=your_jwt_refresh_secret_key
-JWT_EXPIRES_IN=1h
-JWT_REFRESH_EXPIRES_IN=7d
-BCRYPT_SALT_ROUNDS=10
+
+#### Method B: Object-Wrapped Array (Body)
+```json
+{
+  "apiResponses": [
+    {
+      "api_name": "BillingGateway",
+      "response_time_ms": 150,
+      "status_code": 200,
+      "records_returned": 0,
+      "timestamp": "2026-04-09T13:15:00Z"
+    }
+  ]
+}
 ```
 
-*   `NODE_ENV`: `development`, `production`, or `test`.
-*   `PORT`: Port for the Express server.
-*   `DATABASE_URL`: MongoDB connection string.
-*   `JWT_SECRET`: Secret key for signing access tokens.
-*   `JWT_REFRESH_SECRET`: Secret key for signing refresh tokens.
-*   `JWT_EXPIRES_IN`: Expiration time for access tokens (e.g., `1h`, `1d`).
-*   `JWT_REFRESH_EXPIRES_IN`: Expiration time for refresh tokens.
-*   `BCRYPT_SALT_ROUNDS`: Number of salt rounds for bcrypt password hashing.
+#### Method C: Static JSON File Upload
+Upload a `.json` file containing any of the above formats using the field name `file` in a `multipart/form-data` request.
 
-## Running the Project
+### 3. Alerts
+- `GET /alerts` - Fetch all detected anomalies for the user.
+- `PATCH /alerts/:id/resolve` - Mark an alert as resolved.
 
-### Development Mode
+## 🤖 AI & Worker Workflow
+
+1. **Monitor**: Endpoint receives data and enqueues a job.
+2. **Worker**: Consumes job from BullMQ.
+3. **Cache Check**: Looks for existing AI analysis in Redis.
+4. **AI Analysis**: If cache miss, calls **Gemini 2.0 Flash** for root cause and recommendations.
+5. **Notify**: Updates DB and sends email for critical failures.
+
+## 💻 Run Instructions
 
 ```bash
+# Development Mode
 npm run dev
-```
 
-This will start the server using `ts-node-dev`, which automatically restarts the application on file changes.
-
-### Production Build
-
-```bash
+# Production Build
 npm run build
 npm start
 ```
-
-This compiles the TypeScript code to JavaScript and then starts the application.
-
-## Dummy Data / Testing Guidance
-
-To test the authentication and user management features, you can use tools like Postman or Insomnia.
-
-### Register a User
-
-*   **Endpoint**: `POST http://localhost:5000/api/v1/auth/register`
-*   **Body (JSON)**:
-    ```json
-    {
-      "name": "Test User",
-      "email": "test@example.com",
-      "password": "password123",
-      "role": "user"
-    }
-    ```
-
-### Login a User
-
-*   **Endpoint**: `POST http://localhost:5000/api/v1/auth/login`
-*   **Body (JSON)**:
-    ```json
-    {
-      "email": "test@example.com",
-      "password": "password123"
-    }
-    ```
-    Upon successful login, you will receive an `accessToken` in the response body and a `refreshToken` in an HTTP-only cookie.
-
-### Get Authenticated User Profile
-
-*   **Endpoint**: `GET http://localhost:5000/api/v1/users/me`
-*   **Headers**:
-    *   `Authorization`: `Bearer <your_access_token>` (obtained from login)
-
-### Get User by ID
-
-*   **Endpoint**: `GET http://localhost:5000/api/v1/users/<user_id>` (replace `<user_id>` with an actual user ID)
-*   **Headers**:
-    *   `Authorization`: `Bearer <your_access_token>` (obtained from login)
