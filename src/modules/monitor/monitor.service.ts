@@ -8,28 +8,32 @@ const detectAnomaliesAndEnqueue = async (
   userId: string, 
   monitorId: string, 
   apiResponses: IApiResponseData[]
-): Promise<void> => {
-  const RESPONSE_TIME_THRESHOLD = 2000; // 2 seconds
+): Promise<IApiResponseData[]> => {
+  const RESPONSE_TIME_THRESHOLD = 500; // 500ms threshold per requirement
 
-  for (const response of apiResponses) {
+  const processedResponses = await Promise.all(apiResponses.map(async (response) => {
     let hasAnomaly = false;
     let anomalyType: IAlert["anomalyType"] = "Unexpected Payload";
     let severity: IAlert["severity"] = "low";
 
-    // 1. Check for Error Status Codes (4xx or 5xx)
-    if (response.status_code >= 400) {
+    // Mark slow if > 500ms
+    const isSlow = response.response_time_ms > RESPONSE_TIME_THRESHOLD;
+    
+    // Mark error if not 2xx
+    const isError = response.status_code < 200 || response.status_code >= 300;
+    
+    // Mark anomaly if 0 records with status 200
+    const isAnomaly = response.records_returned === 0 && response.status_code === 200;
+
+    if (isError) {
       hasAnomaly = true;
       anomalyType = "Error Status Code";
       severity = response.status_code >= 500 ? "high" : "medium";
-    }
-    // 2. Check for High Response Time
-    else if (response.response_time_ms > RESPONSE_TIME_THRESHOLD) {
+    } else if (isSlow) {
       hasAnomaly = true;
       anomalyType = "High Response Time";
       severity = "medium";
-    }
-    // 3. Check for Zero Records Returned (even if status 200)
-    else if (response.records_returned === 0) {
+    } else if (isAnomaly) {
       hasAnomaly = true;
       anomalyType = "Zero Records Returned";
       severity = "medium";
@@ -63,23 +67,42 @@ const detectAnomaliesAndEnqueue = async (
         userId,
       });
     }
-  }
+
+    return {
+      ...response,
+      is_slow: isSlow,
+      is_error: isError,
+      is_anomaly: isAnomaly
+    };
+  }));
+
+  return processedResponses;
 };
 
-const processMonitorData = async (userId: string, apiResponses: IApiResponseData[]): Promise<IMonitor> => {
-  // 1. Save monitor entry immediately
+const processMonitorData = async (userId: string, apiResponses: IApiResponseData[]): Promise<IApiResponseData[]> => {
+  // 1. Process data first to get markers
+  const RESPONSE_TIME_THRESHOLD = 500;
+  
+  const processedData = apiResponses.map(response => ({
+    ...response,
+    is_slow: response.response_time_ms > RESPONSE_TIME_THRESHOLD,
+    is_error: response.status_code < 200 || response.status_code >= 300,
+    is_anomaly: response.records_returned === 0 && response.status_code === 200
+  }));
+
+  // 2. Save monitor entry immediately
   const monitor = await Monitor.create({
     userId,
-    apiResponses,
+    apiResponses: processedData,
     processedAt: new Date(),
   });
 
-  // 2. Detect and enqueue alerts (fire and forget)
-  detectAnomaliesAndEnqueue(userId, monitor.id as string, apiResponses).catch(err => 
+  // 3. Detect and enqueue alerts (fire and forget)
+  detectAnomaliesAndEnqueue(userId, monitor.id as string, processedData).catch(err => 
     Logger.error("Error in background anomaly detection:", err)
   );
 
-  return monitor;
+  return processedData;
 };
 
 export const monitorService = {

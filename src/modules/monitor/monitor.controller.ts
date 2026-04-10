@@ -16,6 +16,9 @@ const monitor = catchAsync(async (req: Request, res: Response) => {
     apiResponses = req.body;
   } else if (req.body && req.body.apiResponses && Array.isArray(req.body.apiResponses)) {
     apiResponses = req.body.apiResponses;
+  } else if (req.body && typeof req.body === "object" && Object.keys(req.body).length > 0) {
+    // Support single object in body
+    apiResponses = [req.body];
   }
 
   // 2. Handle File Upload
@@ -24,9 +27,15 @@ const monitor = catchAsync(async (req: Request, res: Response) => {
       const fileContent = fs.readFileSync(req.file.path, "utf-8");
       const parsedContent = JSON.parse(fileContent);
       
-      const fileData = Array.isArray(parsedContent) 
-        ? parsedContent 
-        : (parsedContent.apiResponses && Array.isArray(parsedContent.apiResponses) ? parsedContent.apiResponses : []);
+      let fileData: any[] = [];
+      if (Array.isArray(parsedContent)) {
+        fileData = parsedContent;
+      } else if (parsedContent && parsedContent.apiResponses && Array.isArray(parsedContent.apiResponses)) {
+        fileData = parsedContent.apiResponses;
+      } else if (parsedContent && typeof parsedContent === "object") {
+        // Support single object in file
+        fileData = [parsedContent];
+      }
       
       apiResponses = [...apiResponses, ...fileData];
       
@@ -44,12 +53,8 @@ const monitor = catchAsync(async (req: Request, res: Response) => {
 
   const result = await monitorService.processMonitorData(userId, apiResponses);
 
-  sendResponse(res, {
-    statusCode: httpStatus.CREATED,
-    success: true,
-    message: "API responses processed successfully",
-    data: result,
-  });
+  // Per strict requirements: Output MUST also be an ARRAY with same length
+  res.status(httpStatus.CREATED).json(result);
 });
 
 export const monitorController = {

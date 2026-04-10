@@ -8,6 +8,9 @@ export interface IApiResponseData {
   endpoint?: string;
   payload?: any;
   responseBody?: any;
+  is_slow?: boolean;
+  is_error?: boolean;
+  is_anomaly?: boolean;
 }
 
 export interface IMonitor {

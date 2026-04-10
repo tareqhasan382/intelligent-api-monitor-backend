@@ -19,6 +19,9 @@ const MonitorSchema = new Schema<IMonitor>(
         endpoint: { type: String },
         payload: { type: Schema.Types.Mixed },
         responseBody: { type: Schema.Types.Mixed },
+        is_slow: { type: Boolean, default: false },
+        is_error: { type: Boolean, default: false },
+        is_anomaly: { type: Boolean, default: false },
       },
     ],
     processedAt: {

@@ -18,3 +18,264 @@
 2026-04-09 19:51:54:5154 [32minfo[39m: [32mSuccessfully processed alert 69d7aef607ea6db2c304d657[39m
 2026-04-09 19:51:54:5154 [32minfo[39m: [32mJob 11 completed successfully[39m
 2026-04-09 19:53:03:533 [35mhttp[39m: [35m[0mGET /api/v1/alerts/69d7a71dc241dffeec600dad [32m200[0m 10.067 ms - 930[0m[39m
+2026-04-09 21:27:10:2710 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-09 21:27:10:2710 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-09 21:27:10:2710 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-09 21:56:09:569 [35mhttp[39m: [35m[0mOPTIONS /api/v1/auth/login [32m204[0m 6.525 ms - 0[0m[39m
+2026-04-09 21:56:10:5610 [35mhttp[39m: [35m[0mPOST /api/v1/auth/login [32m200[0m 1211.503 ms - 478[0m[39m
+2026-04-09 22:25:33:2533 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 4.248 ms - 0[0m[39m
+2026-04-09 22:25:33:2533 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 334.328 ms - 925[0m[39m
+2026-04-09 22:26:12:2612 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.195 ms - 0[0m[39m
+2026-04-09 22:26:12:2612 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 65.714 ms - -[0m[39m
+2026-04-09 22:27:07:277 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.282 ms - 0[0m[39m
+2026-04-09 22:27:07:277 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 11.839 ms - -[0m[39m
+2026-04-09 22:27:08:278 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 9.117 ms - -[0m[39m
+2026-04-09 22:27:08:278 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 5.086 ms - -[0m[39m
+2026-04-09 22:27:08:278 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 8.529 ms - -[0m[39m
+2026-04-09 22:27:08:278 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 6.338 ms - -[0m[39m
+2026-04-09 22:27:09:279 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 9.524 ms - -[0m[39m
+2026-04-09 22:27:09:279 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 11.971 ms - -[0m[39m
+2026-04-09 22:27:09:279 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 8.876 ms - -[0m[39m
+2026-04-09 22:28:46:2846 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.409 ms - 0[0m[39m
+2026-04-09 22:28:46:2846 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 12.349 ms - -[0m[39m
+2026-04-09 22:39:25:3925 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.928 ms - 0[0m[39m
+2026-04-09 22:39:25:3925 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 18.061 ms - -[0m[39m
+2026-04-09 22:40:09:409 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.324 ms - 0[0m[39m
+2026-04-09 22:40:09:409 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 7.542 ms - -[0m[39m
+2026-04-09 22:41:11:4111 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 0.172 ms - 0[0m[39m
+2026-04-09 22:41:12:4112 [31merror[39m: [31m[DEV ERROR] Monitor validation failed: apiResponses.0.records_returned: Path `records_returned` is required., apiResponses.0.response_time_ms: Path `response_time_ms` is required., apiResponses.0.status_code: Path `status_code` is required., apiResponses.0.api_name: Path `api_name` is required.[39m
+2026-04-09 22:41:12:4112 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [31m500[0m 521.827 ms - 3172[0m[39m
+2026-04-09 22:41:12:4112 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.267 ms - 0[0m[39m
+2026-04-09 22:41:12:4112 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 7.578 ms - -[0m[39m
+2026-04-09 22:41:42:4142 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 0.290 ms - 0[0m[39m
+2026-04-09 22:41:42:4142 [31merror[39m: [31m[DEV ERROR] Monitor validation failed: apiResponses.0.records_returned: Path `records_returned` is required., apiResponses.0.response_time_ms: Path `response_time_ms` is required., apiResponses.0.status_code: Path `status_code` is required., apiResponses.0.api_name: Path `api_name` is required.[39m
+2026-04-09 22:41:42:4142 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [31m500[0m 8.779 ms - 3172[0m[39m
+2026-04-09 22:41:42:4142 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.219 ms - 0[0m[39m
+2026-04-09 22:41:42:4142 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 10.477 ms - -[0m[39m
+2026-04-09 22:42:00:420 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 0.193 ms - 0[0m[39m
+2026-04-09 22:42:00:420 [31merror[39m: [31m[DEV ERROR] Monitor validation failed: apiResponses.0.records_returned: Path `records_returned` is required., apiResponses.0.response_time_ms: Path `response_time_ms` is required., apiResponses.0.status_code: Path `status_code` is required., apiResponses.0.api_name: Path `api_name` is required.[39m
+2026-04-09 22:42:00:420 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [31m500[0m 35.441 ms - 3172[0m[39m
+2026-04-09 22:42:01:421 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.211 ms - 0[0m[39m
+2026-04-09 22:42:01:421 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 9.380 ms - -[0m[39m
+2026-04-09 22:42:46:4246 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 59.932 ms - 459[0m[39m
+2026-04-09 22:42:46:4246 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d7d706d40796efd7285cb2[39m
+2026-04-09 22:42:46:4246 [32minfo[39m: [32mProcessing job 12 for alert 69d7d706d40796efd7285cb2[39m
+2026-04-09 22:42:46:4246 [32minfo[39m: [32mCache MISS: ai_cache:BillingGateway:200:Zero Records Returned[39m
+2026-04-09 22:43:10:4310 [31merror[39m: [31mGemini AI Alert Generation Error:[39m
+2026-04-09 22:43:10:4310 [32minfo[39m: [32mSuccessfully processed alert 69d7d706d40796efd7285cb2[39m
+2026-04-09 22:43:10:4310 [32minfo[39m: [32mJob 12 completed successfully[39m
+2026-04-09 22:44:18:4418 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.374 ms - 0[0m[39m
+2026-04-09 22:44:18:4418 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 66.210 ms - 1599[0m[39m
+2026-04-09 22:44:49:4449 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 0.437 ms - 0[0m[39m
+2026-04-09 22:44:49:4449 [31merror[39m: [31m[DEV ERROR] Monitor validation failed: apiResponses.0.records_returned: Path `records_returned` is required., apiResponses.0.response_time_ms: Path `response_time_ms` is required., apiResponses.0.status_code: Path `status_code` is required., apiResponses.0.api_name: Path `api_name` is required.[39m
+2026-04-09 22:44:49:4449 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [31m500[0m 37.259 ms - 3172[0m[39m
+2026-04-09 22:44:50:4450 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.173 ms - 0[0m[39m
+2026-04-09 22:44:50:4450 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 7.974 ms - -[0m[39m
+2026-04-09 22:45:19:4519 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.268 ms - 0[0m[39m
+2026-04-09 22:45:19:4519 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 20.124 ms - -[0m[39m
+2026-04-09 22:45:31:4531 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 0.290 ms - 0[0m[39m
+2026-04-09 22:45:31:4531 [31merror[39m: [31m[DEV ERROR] Monitor validation failed: apiResponses.0.records_returned: Path `records_returned` is required., apiResponses.0.response_time_ms: Path `response_time_ms` is required., apiResponses.0.status_code: Path `status_code` is required., apiResponses.0.api_name: Path `api_name` is required.[39m
+2026-04-09 22:45:31:4531 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [31m500[0m 22.570 ms - 3172[0m[39m
+2026-04-09 22:45:32:4532 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.206 ms - 0[0m[39m
+2026-04-09 22:45:32:4532 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 8.535 ms - -[0m[39m
+2026-04-09 22:49:12:4912 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.203 ms - 0[0m[39m
+2026-04-09 22:49:12:4912 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 7.558 ms - -[0m[39m
+2026-04-09 22:49:31:4931 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 0.366 ms - 0[0m[39m
+2026-04-09 22:49:31:4931 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 88.135 ms - 459[0m[39m
+2026-04-09 22:49:32:4932 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d7d89bd40796efd7285cb9[39m
+2026-04-09 22:49:32:4932 [32minfo[39m: [32mProcessing job 13 for alert 69d7d89bd40796efd7285cb9[39m
+2026-04-09 22:49:32:4932 [32minfo[39m: [32mCache HIT: ai_cache:BillingGateway:200:Zero Records Returned[39m
+2026-04-09 22:49:32:4932 [32minfo[39m: [32mSuccessfully processed alert 69d7d89bd40796efd7285cb9[39m
+2026-04-09 22:49:32:4932 [32minfo[39m: [32mJob 13 completed successfully[39m
+2026-04-09 22:49:32:4932 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.333 ms - 0[0m[39m
+2026-04-09 22:49:32:4932 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 7.894 ms - 2273[0m[39m
+2026-04-09 22:49:56:4956 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts/69d7d89bd40796efd7285cb9/resolve [32m204[0m 0.203 ms - 0[0m[39m
+2026-04-09 22:49:56:4956 [35mhttp[39m: [35m[0mPATCH /api/v1/alerts/69d7d89bd40796efd7285cb9/resolve [32m200[0m 90.769 ms - 750[0m[39m
+2026-04-09 22:49:57:4957 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.234 ms - 0[0m[39m
+2026-04-09 22:49:57:4957 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 18.355 ms - 2272[0m[39m
+2026-04-09 22:50:00:500 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts/69d7d706d40796efd7285cb2/resolve [32m204[0m 0.275 ms - 0[0m[39m
+2026-04-09 22:50:00:500 [35mhttp[39m: [35m[0mPATCH /api/v1/alerts/69d7d706d40796efd7285cb2/resolve [32m200[0m 7.060 ms - 750[0m[39m
+2026-04-09 22:50:00:500 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 7.616 ms - 2271[0m[39m
+2026-04-09 22:50:06:506 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts/69d7aef607ea6db2c304d657/resolve [32m204[0m 0.125 ms - 0[0m[39m
+2026-04-09 22:50:06:506 [35mhttp[39m: [35m[0mPATCH /api/v1/alerts/69d7aef607ea6db2c304d657/resolve [32m200[0m 7.850 ms - 919[0m[39m
+2026-04-09 22:50:06:506 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.162 ms - 0[0m[39m
+2026-04-09 22:50:06:506 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 6.550 ms - 2270[0m[39m
+2026-04-09 22:50:21:5021 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.262 ms - 0[0m[39m
+2026-04-09 22:50:21:5021 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 12.827 ms - -[0m[39m
+2026-04-09 22:59:31:5931 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 1.712 ms - 0[0m[39m
+2026-04-09 22:59:31:5931 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 67.646 ms - -[0m[39m
+2026-04-09 22:59:41:5941 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.202 ms - 0[0m[39m
+2026-04-09 22:59:41:5941 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 18.611 ms - -[0m[39m
+2026-04-09 22:59:42:5942 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 8.014 ms - -[0m[39m
+2026-04-09 23:05:00:50 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.256 ms - 0[0m[39m
+2026-04-09 23:05:00:50 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 15.641 ms - -[0m[39m
+2026-04-09 23:05:25:525 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 1.489 ms - 0[0m[39m
+2026-04-09 23:05:25:525 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 177.391 ms - 464[0m[39m
+2026-04-09 23:05:25:525 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d7dc55d40796efd7285cbc[39m
+2026-04-09 23:05:25:525 [32minfo[39m: [32mProcessing job 14 for alert 69d7dc55d40796efd7285cbc[39m
+2026-04-09 23:05:25:525 [32minfo[39m: [32mCache MISS: ai_cache:AnalyticsEngine:200:High Response Time[39m
+2026-04-09 23:05:25:525 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.265 ms - 0[0m[39m
+2026-04-09 23:05:25:525 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 8.507 ms - 2752[0m[39m
+2026-04-09 23:05:35:535 [32minfo[39m: [32mHigh-severity alert email sent: <16e3f1e2-b3be-71f8-6d0c-1e5844ccf6ae@localhost>[39m
+2026-04-09 23:05:35:535 [32minfo[39m: [32mSuccessfully processed alert 69d7dc55d40796efd7285cbc[39m
+2026-04-09 23:05:35:535 [32minfo[39m: [32mJob 14 completed successfully[39m
+2026-04-09 23:06:06:66 [35mhttp[39m: [35m[0mGET /api/v1/alerts/ [32m200[0m 47.891 ms - 13995[0m[39m
+2026-04-09 23:06:41:641 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.230 ms - 0[0m[39m
+2026-04-09 23:06:41:641 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 12.311 ms - 3144[0m[39m
+2026-04-09 23:06:51:651 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts/69d7dc55d40796efd7285cbc/resolve [32m204[0m 0.179 ms - 0[0m[39m
+2026-04-09 23:06:51:651 [35mhttp[39m: [35m[0mPATCH /api/v1/alerts/69d7dc55d40796efd7285cbc/resolve [32m200[0m 19.838 ms - 950[0m[39m
+2026-04-09 23:06:52:652 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.261 ms - 0[0m[39m
+2026-04-09 23:06:52:652 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 12.639 ms - 3143[0m[39m
+2026-04-10 12:45:34:4534 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-10 12:45:34:4534 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-10 12:45:34:4534 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-10 12:47:11:4711 [35mhttp[39m: [35m[0mOPTIONS /api/v1/auth/login [32m204[0m 1.762 ms - 0[0m[39m
+2026-04-10 12:47:12:4712 [35mhttp[39m: [35m[0mPOST /api/v1/auth/login [32m200[0m 1277.564 ms - 478[0m[39m
+2026-04-10 12:47:12:4712 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.253 ms - 0[0m[39m
+2026-04-10 12:47:12:4712 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 30.410 ms - -[0m[39m
+2026-04-10 12:47:58:4758 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 0.227 ms - 0[0m[39m
+2026-04-10 12:47:59:4759 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 91.785 ms - 454[0m[39m
+2026-04-10 12:47:59:4759 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d89d1f3783039a437ea5c6[39m
+2026-04-10 12:47:59:4759 [32minfo[39m: [32mProcessing job 15 for alert 69d89d1f3783039a437ea5c6[39m
+2026-04-10 12:47:59:4759 [32minfo[39m: [32mCache MISS: ai_cache:Test :200:High Response Time[39m
+2026-04-10 12:47:59:4759 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.935 ms - 0[0m[39m
+2026-04-10 12:47:59:4759 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 56.856 ms - 3605[0m[39m
+2026-04-10 12:48:08:488 [32minfo[39m: [32mHigh-severity alert email sent: <f365e846-6931-54dc-25fd-1096adec2b80@localhost>[39m
+2026-04-10 12:48:08:488 [32minfo[39m: [32mSuccessfully processed alert 69d89d1f3783039a437ea5c6[39m
+2026-04-10 12:48:08:488 [32minfo[39m: [32mJob 15 completed successfully[39m
+2026-04-10 12:48:16:4816 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts/69d89d1f3783039a437ea5c6/resolve [32m204[0m 0.277 ms - 0[0m[39m
+2026-04-10 12:48:16:4816 [35mhttp[39m: [35m[0mPATCH /api/v1/alerts/69d89d1f3783039a437ea5c6/resolve [32m200[0m 12.232 ms - 894[0m[39m
+2026-04-10 12:48:16:4816 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.150 ms - 0[0m[39m
+2026-04-10 12:48:16:4816 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 8.522 ms - 3960[0m[39m
+2026-04-10 12:50:56:5056 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 1.011 ms - 0[0m[39m
+2026-04-10 12:50:56:5056 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 49.235 ms - 464[0m[39m
+2026-04-10 12:50:56:5056 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d89dd03783039a437ea5c9[39m
+2026-04-10 12:50:56:5056 [32minfo[39m: [32mProcessing job 16 for alert 69d89dd03783039a437ea5c9[39m
+2026-04-10 12:50:56:5056 [32minfo[39m: [32mCache MISS: ai_cache:NotificationService:503:Error Status Code[39m
+2026-04-10 12:50:57:5057 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.161 ms - 0[0m[39m
+2026-04-10 12:50:57:5057 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 9.535 ms - 4445[0m[39m
+2026-04-10 12:51:06:516 [32minfo[39m: [32mHigh-severity alert email sent: <3ae18dda-b73b-b420-30a0-d11db68175cc@localhost>[39m
+2026-04-10 12:51:06:516 [32minfo[39m: [32mSuccessfully processed alert 69d89dd03783039a437ea5c9[39m
+2026-04-10 12:51:06:516 [32minfo[39m: [32mJob 16 completed successfully[39m
+2026-04-10 12:51:17:5117 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts/69d89dd03783039a437ea5c9/resolve [32m204[0m 0.233 ms - 0[0m[39m
+2026-04-10 12:51:17:5117 [35mhttp[39m: [35m[0mPATCH /api/v1/alerts/69d89dd03783039a437ea5c9/resolve [32m200[0m 10.052 ms - 907[0m[39m
+2026-04-10 12:51:17:5117 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.427 ms - 0[0m[39m
+2026-04-10 12:51:17:5117 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 13.468 ms - 4790[0m[39m
+2026-04-10 12:51:49:5149 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 0.507 ms - 0[0m[39m
+2026-04-10 12:51:49:5149 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 66.338 ms - 783[0m[39m
+2026-04-10 12:51:49:5149 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d89e053783039a437ea5ce[39m
+2026-04-10 12:51:49:5149 [32minfo[39m: [32mProcessing job 17 for alert 69d89e053783039a437ea5ce[39m
+2026-04-10 12:51:49:5149 [32minfo[39m: [32mCache MISS: ai_cache:OrderService:500:Error Status Code[39m
+2026-04-10 12:51:50:5150 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.263 ms - 0[0m[39m
+2026-04-10 12:51:50:5150 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 21.357 ms - 5261[0m[39m
+2026-04-10 12:52:03:523 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts/69d89e053783039a437ea5ce/resolve [32m204[0m 0.164 ms - 0[0m[39m
+2026-04-10 12:52:03:523 [35mhttp[39m: [35m[0mPATCH /api/v1/alerts/69d89e053783039a437ea5ce/resolve [32m200[0m 7.781 ms - 547[0m[39m
+2026-04-10 12:52:03:523 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.349 ms - 0[0m[39m
+2026-04-10 12:52:03:523 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 13.970 ms - 5260[0m[39m
+2026-04-10 12:52:24:5224 [32minfo[39m: [32mHigh-severity alert email sent: <17005611-7b80-94ee-5fe6-f0407ceca20f@localhost>[39m
+2026-04-10 12:52:24:5224 [32minfo[39m: [32mSuccessfully processed alert 69d89e053783039a437ea5ce[39m
+2026-04-10 12:52:24:5224 [32minfo[39m: [32mJob 17 completed successfully[39m
+2026-04-10 12:52:42:5242 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.407 ms - 0[0m[39m
+2026-04-10 12:52:42:5242 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 16.725 ms - 5565[0m[39m
+2026-04-10 12:53:00:530 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 0.382 ms - 0[0m[39m
+2026-04-10 12:53:00:530 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 19.776 ms - 783[0m[39m
+2026-04-10 12:53:00:530 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d89e4c3783039a437ea5d3[39m
+2026-04-10 12:53:00:530 [32minfo[39m: [32mProcessing job 18 for alert 69d89e4c3783039a437ea5d3[39m
+2026-04-10 12:53:00:530 [32minfo[39m: [32mCache HIT: ai_cache:OrderService:500:Error Status Code[39m
+2026-04-10 12:53:01:531 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.188 ms - 0[0m[39m
+2026-04-10 12:53:01:531 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 11.210 ms - 6341[0m[39m
+2026-04-10 12:53:04:534 [32minfo[39m: [32mHigh-severity alert email sent: <4be89365-70a8-d0d1-c5e1-0c18d40ecb70@localhost>[39m
+2026-04-10 12:53:04:534 [32minfo[39m: [32mSuccessfully processed alert 69d89e4c3783039a437ea5d3[39m
+2026-04-10 12:53:04:534 [32minfo[39m: [32mJob 18 completed successfully[39m
+2026-04-10 12:53:09:539 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts/69d89e4c3783039a437ea5d3/resolve [32m204[0m 0.253 ms - 0[0m[39m
+2026-04-10 12:53:09:539 [35mhttp[39m: [35m[0mPATCH /api/v1/alerts/69d89e4c3783039a437ea5d3/resolve [32m200[0m 13.370 ms - 852[0m[39m
+2026-04-10 12:53:10:5310 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.196 ms - 0[0m[39m
+2026-04-10 12:53:10:5310 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 11.243 ms - 6340[0m[39m
+2026-04-10 12:53:37:5337 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.422 ms - 0[0m[39m
+2026-04-10 12:53:37:5337 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 53.935 ms - -[0m[39m
+2026-04-10 12:58:40:5840 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-10 12:58:40:5840 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-10 12:58:40:5840 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-10 13:07:59:759 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-10 13:07:59:759 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-10 13:07:59:759 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-10 13:08:14:814 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-10 13:08:14:814 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-10 13:08:14:814 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-10 13:08:20:820 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-10 13:08:20:820 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-10 13:08:20:820 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-10 13:09:48:948 [32minfo[39m: [32mMongoDB Connected: localhost[39m
+2026-04-10 13:09:48:948 [32minfo[39m: [32mAlert Worker initialized and listening for jobs...[39m
+2026-04-10 13:09:48:948 [32minfo[39m: [32mServer is running on http://localhost:5000[39m
+2026-04-10 13:10:02:102 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 6.160 ms - 0[0m[39m
+2026-04-10 13:10:02:102 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 101.413 ms - -[0m[39m
+2026-04-10 13:11:03:113 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 0.853 ms - 0[0m[39m
+2026-04-10 13:11:03:113 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 112.279 ms - 289[0m[39m
+2026-04-10 13:11:04:114 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d8a287ef092ae4a7f829a8[39m
+2026-04-10 13:11:04:114 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d8a287ef092ae4a7f829a9[39m
+2026-04-10 13:11:04:114 [32minfo[39m: [32mProcessing job 19 for alert 69d8a287ef092ae4a7f829a8[39m
+2026-04-10 13:11:04:114 [32minfo[39m: [32mCache MISS: ai_cache:PatientDataAPI:200:High Response Time[39m
+2026-04-10 13:11:04:114 [32minfo[39m: [32mProcessing job 20 for alert 69d8a287ef092ae4a7f829a9[39m
+2026-04-10 13:11:04:114 [32minfo[39m: [32mCache MISS: ai_cache:AppointmentAPI:500:Error Status Code[39m
+2026-04-10 13:11:04:114 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.371 ms - 0[0m[39m
+2026-04-10 13:11:04:114 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 124.152 ms - 7295[0m[39m
+2026-04-10 13:11:09:119 [32minfo[39m: [32mSuccessfully processed alert 69d8a287ef092ae4a7f829a8[39m
+2026-04-10 13:11:09:119 [32minfo[39m: [32mJob 19 completed successfully[39m
+2026-04-10 13:11:50:1150 [32minfo[39m: [32mHigh-severity alert email sent: <331e15a5-7ad9-412d-7508-8a590acebed5@localhost>[39m
+2026-04-10 13:11:50:1150 [32minfo[39m: [32mSuccessfully processed alert 69d8a287ef092ae4a7f829a9[39m
+2026-04-10 13:11:50:1150 [32minfo[39m: [32mJob 20 completed successfully[39m
+2026-04-10 13:13:49:1349 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 1.440 ms - 0[0m[39m
+2026-04-10 13:13:50:1350 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 630.133 ms - 140[0m[39m
+2026-04-10 13:13:50:1350 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d8a32eef092ae4a7f829ac[39m
+2026-04-10 13:13:50:1350 [32minfo[39m: [32mProcessing job 21 for alert 69d8a32eef092ae4a7f829ac[39m
+2026-04-10 13:13:50:1350 [32minfo[39m: [32mCache MISS: ai_cache:PaymentAPI:502:Error Status Code[39m
+2026-04-10 13:13:50:1350 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.449 ms - 0[0m[39m
+2026-04-10 13:13:50:1350 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 30.388 ms - 8438[0m[39m
+2026-04-10 13:13:58:1358 [32minfo[39m: [32mHigh-severity alert email sent: <09fc904b-fd07-75f5-a2f5-10cff85051a0@localhost>[39m
+2026-04-10 13:13:58:1358 [32minfo[39m: [32mSuccessfully processed alert 69d8a32eef092ae4a7f829ac[39m
+2026-04-10 13:13:58:1358 [32minfo[39m: [32mJob 21 completed successfully[39m
+2026-04-10 13:14:24:1424 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.971 ms - 0[0m[39m
+2026-04-10 13:14:24:1424 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 87.669 ms - 8748[0m[39m
+2026-04-10 13:16:53:1653 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 0.412 ms - 0[0m[39m
+2026-04-10 13:16:53:1653 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 39.969 ms - 144[0m[39m
+2026-04-10 13:16:53:1653 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d8a3e5ef092ae4a7f829af[39m
+2026-04-10 13:16:53:1653 [32minfo[39m: [32mProcessing job 22 for alert 69d8a3e5ef092ae4a7f829af[39m
+2026-04-10 13:16:53:1653 [32minfo[39m: [32mCache MISS: ai_cache:UserProfileAPI:502:Error Status Code[39m
+2026-04-10 13:16:54:1654 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.423 ms - 0[0m[39m
+2026-04-10 13:16:54:1654 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 16.231 ms - 9224[0m[39m
+2026-04-10 13:17:11:1711 [32minfo[39m: [32mHigh-severity alert email sent: <c78761c9-e0ad-b16b-da0a-efbd5abba83a@localhost>[39m
+2026-04-10 13:17:11:1711 [32minfo[39m: [32mSuccessfully processed alert 69d8a3e5ef092ae4a7f829af[39m
+2026-04-10 13:17:11:1711 [32minfo[39m: [32mJob 22 completed successfully[39m
+2026-04-10 13:23:18:2318 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.289 ms - 0[0m[39m
+2026-04-10 13:23:18:2318 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 48.491 ms - 9572[0m[39m
+2026-04-10 13:31:10:3110 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.535 ms - 0[0m[39m
+2026-04-10 13:31:10:3110 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 28.376 ms - -[0m[39m
+2026-04-10 13:31:21:3121 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts/69d8a3e5ef092ae4a7f829af/resolve [32m204[0m 0.483 ms - 0[0m[39m
+2026-04-10 13:31:21:3121 [35mhttp[39m: [35m[0mPATCH /api/v1/alerts/69d8a3e5ef092ae4a7f829af/resolve [32m200[0m 22.309 ms - 900[0m[39m
+2026-04-10 13:31:22:3122 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.680 ms - 0[0m[39m
+2026-04-10 13:31:22:3122 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 22.486 ms - 9571[0m[39m
+2026-04-10 13:31:25:3125 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts/69d8a32eef092ae4a7f829ac/resolve [32m204[0m 0.458 ms - 0[0m[39m
+2026-04-10 13:31:25:3125 [35mhttp[39m: [35m[0mPATCH /api/v1/alerts/69d8a32eef092ae4a7f829ac/resolve [32m200[0m 13.275 ms - 854[0m[39m
+2026-04-10 13:31:26:3126 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 16.856 ms - 9570[0m[39m
+2026-04-10 13:31:28:3128 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts/69d8a287ef092ae4a7f829a9/resolve [32m204[0m 0.346 ms - 0[0m[39m
+2026-04-10 13:31:28:3128 [35mhttp[39m: [35m[0mPATCH /api/v1/alerts/69d8a287ef092ae4a7f829a9/resolve [32m200[0m 13.338 ms - 877[0m[39m
+2026-04-10 13:31:29:3129 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.248 ms - 0[0m[39m
+2026-04-10 13:31:29:3129 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 13.972 ms - 9569[0m[39m
+2026-04-10 13:31:31:3131 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts/69d8a287ef092ae4a7f829a8/resolve [32m204[0m 0.267 ms - 0[0m[39m
+2026-04-10 13:31:31:3131 [35mhttp[39m: [35m[0mPATCH /api/v1/alerts/69d8a287ef092ae4a7f829a8/resolve [32m200[0m 12.706 ms - 905[0m[39m
+2026-04-10 13:31:32:3132 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 24.513 ms - 9568[0m[39m
+2026-04-10 13:31:37:3137 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 2.402 ms - 0[0m[39m
+2026-04-10 13:31:37:3137 [35mhttp[39m: [35m[0mGET /api/v1/alerts [36m304[0m 30.422 ms - -[0m[39m
+2026-04-10 13:33:19:3319 [35mhttp[39m: [35m[0mOPTIONS /api/v1/monitor [32m204[0m 0.430 ms - 0[0m[39m
+2026-04-10 13:33:19:3319 [35mhttp[39m: [35m[0mPOST /api/v1/monitor [32m201[0m 57.528 ms - 144[0m[39m
+2026-04-10 13:33:19:3319 [32minfo[39m: [32mJob enqueued: alert-processing for alert 69d8a7bfef092ae4a7f829b2[39m
+2026-04-10 13:33:19:3319 [32minfo[39m: [32mProcessing job 23 for alert 69d8a7bfef092ae4a7f829b2[39m
+2026-04-10 13:33:19:3319 [32minfo[39m: [32mCache MISS: ai_cache:PaymentService:500:Error Status Code[39m
+2026-04-10 13:33:20:3320 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.228 ms - 0[0m[39m
+2026-04-10 13:33:20:3320 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 20.729 ms - 10044[0m[39m
+2026-04-10 13:33:31:3331 [32minfo[39m: [32mHigh-severity alert email sent: <fb89933b-fa7b-b0cd-46ab-f0fdc5409fe2@localhost>[39m
+2026-04-10 13:33:31:3331 [32minfo[39m: [32mSuccessfully processed alert 69d8a7bfef092ae4a7f829b2[39m
+2026-04-10 13:33:31:3331 [32minfo[39m: [32mJob 23 completed successfully[39m
+2026-04-10 13:33:32:3332 [35mhttp[39m: [35m[0mOPTIONS /api/v1/alerts [32m204[0m 0.437 ms - 0[0m[39m
+2026-04-10 13:33:32:3332 [35mhttp[39m: [35m[0mGET /api/v1/alerts [32m200[0m 44.335 ms - 10354[0m[39m
