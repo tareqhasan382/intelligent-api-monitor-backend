@@ -9,11 +9,9 @@ This is the backend for the Intelligent API Monitoring System, built with Node.j
 - **Intelligent Alerts**: Integration with **Google Gemini 2.0 Flash** to generate human-readable alert summaries.
 - **Distributed Caching**: **Redis** caching (with in-memory fallback) for repetitive AI analysis to reduce latency and cost.
 - **Anomaly Detection**: 
-  - Status Code Errors (4xx, 5xx).
-  - High Latency (Response Time > 2000ms).
+  - Status Code Errors (Non-2xx status codes).
+  - High Latency (Response Time > 500ms).
   - Zero Records Returned (even on 200 OK status).
-- **Email Notifications**: Automated HTML email alerts for **High** and **CRITICAL** severity anomalies using Nodemailer.
-- **Flexible Data Input**: Support for both raw JSON payloads and file uploads.
 
 ## 🏗️ Architecture Overview
 
@@ -24,7 +22,7 @@ src/
  ├── modules/
  │    ├── user/       # User Profile & Management
  │    ├── auth/       # Authentication (Login/Register)
- │    ├── monitor/    # API Log Processing
+ │    ├── monitor/    # API Log Processing (Batch support)
  │    ├── alert/      # Alert Storage & Retrieval
  ├── queues/          # BullMQ Queue Definitions (Producer)
  ├── workers/         # BullMQ Workers (Consumer)
@@ -40,22 +38,36 @@ src/
 ### Prerequisites
 
 - Node.js (v18+)
-- MongoDB (Local or Atlas)
-- **Redis Server**: 
-  - Recommended: **v6.2.0 or higher** (Required for optimal BullMQ performance).
-  - Minimum: v5.0.0 (May show version warnings in logs).
+- **Docker & Docker Compose**: Required for database and caching.
 - Google Gemini API Key
 
-### Installation
+### Installation & Run
 
 1. **Clone and Install:**
   ```bash
-    git clone <repository_url>
-    cd Intelligent_API_Monitoring_System/backend
+    git clone https://github.com/tareqhasan382/intelligent-api-monitor-backend.git
+    cd intelligent-api-monitor-backend
     npm install
   ```
 2. **Environment Variables:**
-  Create a `.env` file based on `.env.example`:
+  Create a `.env` file based on `.env.example`. Ensure `GEMINI_API_KEY` is set.
+
+3. **Run Infrastructure (Docker):**
+  The system requires MongoDB and Redis. Run them using Docker Compose:
+  ```bash
+  docker-compose up -d
+  ```
+
+4. **Start the Backend:**
+  - **Development Mode:**
+    ```bash
+    npm run start:dev
+    ```
+  - **Production Mode:**
+    ```bash
+    npm run build
+    npm start
+    ```
 
 ## 📡 API Endpoints & Input Methods
 
@@ -68,9 +80,10 @@ All API routes are prefixed with `/api/v1`.
 
 ### 2. Monitoring (`POST /monitor`)
 
-You can provide input to the system using either of the following methods:
+The system strictly handles **batch processing**. You MUST provide a raw JSON array or an object-wrapped array.
 
-#### Method A: Raw JSON Array (Direct Body)
+#### Method A: Raw JSON Array (Strict Root Element)
+**Requirement**: The root element must be an ARRAY.
 
 ```json
 [
@@ -79,29 +92,17 @@ You can provide input to the system using either of the following methods:
     "response_time_ms": 1200,
     "status_code": 200,
     "records_returned": 50
+  },
+  {
+    "api_name": "AppointmentAPI",
+    "response_time_ms": 5500,
+    "status_code": 500,
+    "records_returned": 0
   }
 ]
 ```
 
-#### Method B: Object-Wrapped Array (Body)
 
-```json
-{
-  "apiResponses": [
-    {
-      "api_name": "BillingGateway",
-      "response_time_ms": 150,
-      "status_code": 200,
-      "records_returned": 0,
-      "timestamp": "2026-04-09T13:15:00Z"
-    }
-  ]
-}
-```
-
-#### Method C: Static JSON File Upload
-
-Upload a `.json` file containing any of the above formats using the field name `file` in a `multipart/form-data` request.
 
 ### 3. Alerts
 
@@ -120,7 +121,7 @@ Upload a `.json` file containing any of the above formats using the field name `
 
 ```bash
 # Development Mode
-npm run dev
+npm run start:dev
 
 # Production Build
 npm run build
